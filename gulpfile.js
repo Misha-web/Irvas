@@ -14,7 +14,7 @@ gulp.task('clean', async function(){
 
 gulp.task('tinypng', function () {
     gulp.src('app/img/*.{png,jpg,jpeg}')
-        .pipe(tinypng({ key: 'PdhxcMgq201RyGy1PbMFwRrmq3KVcKDg',}))
+        .pipe(tinypng({ key: 'PdhxcMgq201RyGy1PbMFwRrmq3KVcKDg'}))
         .pipe(gulp.dest('app/image'));
 });
 
