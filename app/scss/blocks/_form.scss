@@ -1,0 +1,67 @@
+.form {
+	padding: 40px 50px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	border-radius: 10px;
+	background-color: $primaryLight;
+	color: $primary;
+	font-weight: 700;
+	&__suptitle {
+		margin-bottom: 10px;
+		font-size: 20px;
+	}
+	&__title {
+		margin-bottom: 40px;
+		font-size: 24px;
+	}
+	&__input {
+		padding: 24px 10px 22px;
+		margin-bottom: 20px;
+		width: 100%;
+		border-radius: 10px;
+		border: 1px solid $tertiaryLight;
+		&::placeholder {
+			text-align: center;
+			color: $secondaryDark;
+			font-size: 15px;
+			font-weight: 400;
+		}
+	}
+	&__button {
+		padding: 28px 42px;
+		margin-bottom: 20px;
+	}
+	&__description {
+		color: $tertiary;
+		font-size: 11px;
+		font-weight: 300;
+	}
+}
+
+@media(max-width: $md2) {
+	.form {
+		padding: 30px 40px;
+	}
+}
+
+@media(max-width: $md3) {
+	.form {
+		padding: 20px 30px;
+		&__suptitle {
+			font-size: 18px;
+		}
+		&__title {
+			margin-bottom: 30px;
+			font-size: 22px;
+		}
+		&__input {
+			padding: 20px 10px 18px;
+			margin-bottom: 18px;
+		}
+		&__button {
+			padding: 24px 38px;
+			margin-bottom: 15px;
+		}
+	}
+}

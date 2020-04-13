@@ -6,6 +6,9 @@
 		align-items: center;
 		flex-wrap: wrap;
 	}
+	&__wrapper {
+		margin-bottom: 20px;
+	}
 	&__button {
 		position: relative;
 	}
@@ -124,7 +127,6 @@
 		}
 		&__wrapper {
 			padding: 0 15px;
-			margin-bottom: 20px;
 		}
 		&__button-img {
 			left: 20px;

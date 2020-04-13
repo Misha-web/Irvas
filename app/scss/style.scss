@@ -2,9 +2,10 @@
 @import "libs";
 @import "fonts";
 @import "blocks/_header.scss";
+@import "blocks/_intro.scss";
+@import "blocks/_form.scss";
 
 body {
-    font-family: 'Open Sans Condensed', sans-serif;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     color: $primaryDark;
@@ -33,7 +34,18 @@ button {
     cursor: pointer;
     outline: none;
     background-color: transparent;
-    border: none;
+    border: none
+}
+
+.button {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 20px rgba(255, 153, 0, 0.4);
+    border-radius: 10px;
+    border: 1px solid #ffc600;
+    background-color: #e8e8e8;
+    background-image: linear-gradient(to bottom, #ffed26 0%, #ffb400 100%);
 }
 
 .container {
@@ -41,5 +53,11 @@ button {
     padding: 0px 15px;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+@media(max-width: $md3) {
+    .button {
+        font-size: 18px;
+    }
 }
 
