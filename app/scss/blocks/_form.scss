@@ -20,7 +20,7 @@
 		margin-bottom: 20px;
 		width: 100%;
 		border-radius: 10px;
-		border: 1px solid $tertiaryLight;
+		border: 1px solid $primaryLight-2;
 		&::placeholder {
 			text-align: center;
 			color: $secondaryDark;
@@ -33,7 +33,7 @@
 		margin-bottom: 20px;
 	}
 	&__description {
-		color: $tertiary;
+		color: $primaryLight-3;
 		font-size: 11px;
 		font-weight: 300;
 	}

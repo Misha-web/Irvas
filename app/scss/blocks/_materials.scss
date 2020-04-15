@@ -1,0 +1,226 @@
+.materials {
+	&__header {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		text-align: center;
+	}
+	&__item {
+		flex-basis: 20%;
+		margin-bottom: 40px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		color: $secondary-3;
+		text-decoration: underline;
+	}
+	&__item-img {
+		display: block;
+		width: 100%;
+		max-width: 100px;
+		margin-bottom: 25px;
+	}
+	&__item-text {
+		max-width: 140px;
+		margin: 0px auto;
+		line-height: 26px;
+		font-family: "Open Sans - Semibold", sans-serif;
+	}
+	&__body {
+		display: none;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		&.active {
+			display: flex;
+		}
+	}
+	&__content {
+		position: relative;
+		flex-basis: 50%;
+		&:after {
+			position: absolute;
+			top: 0%;
+			left: 50%;
+			content: '';
+			border: 10px solid transparent;
+		}
+		&-cold {
+			border-top: 5px solid $secondary-2;
+			background-image: linear-gradient(to bottom, $secondary-2 0%, rgba(13, 143, 227, .1) 0%, rgba(255, 255, 255, 0) 100%);
+			&:after {
+				content: '';
+				border-top: 10px solid $secondary-2;
+			}
+		}
+		&-heat{
+			border-top: 5px solid $tertiary;
+			background-image: linear-gradient(to bottom, $tertiary 0%, rgba(255, 185, 3, .1) 0%, rgba(255, 255, 255, 0) 100%);
+			&:after {
+				content: '';
+				border-top: 10px solid $tertiary;
+			}
+		}
+	}
+	&__content-title {
+		margin-top: 35px;
+		text-align: center;
+		font-size: 20px;
+		font-weight: 700;
+		text-transform: uppercase;
+		&--cold {
+			color: $secondary-2;
+		}
+		&--heat {
+			color: $tertiary;
+		}
+	}
+	&__content-img {
+		max-width: 465px;
+		margin: 30px auto;
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		max-width: 80%;
+		max-width: 465px;
+		margin: 0 auto 50px;
+	}
+	&__check {
+		position: relative;
+		margin-bottom: 5px;
+		font-size: 14px;
+		line-height: 30px;
+		display: flex;
+		align-items: center;
+	}
+	&__check-input {
+		appearance: none;
+		&:checked + .materials__checkbox:before {
+			background-image: url("data:image/svg+xml,%3Csvg id='Capa_1' enable-background='new 0 0 515.556 515.556' height='10' viewBox='0 0 515.556 515.556' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m0 274.226 176.549 176.886 339.007-338.672-48.67-47.997-290.337 290-128.553-128.552z'/%3E%3C/svg%3E");
+		}
+	}
+	&__checkbox {
+		position: relative;
+		margin-right: 20px;
+		min-width: 20px;
+		min-height: 20px;
+		display: inline-block;
+		background-color: $checkbox-color;
+		border-radius: 50%;
+		&:before {
+			content: '';
+			background-image: none;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: block;
+			width: 10px;
+			height: 10px;
+			transition: .3s linear;
+		}
+	}
+	&__content-footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 47px;
+	}
+	&__description-price {
+		margin-bottom: 15px;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 30px;
+	}
+	&__description-text {
+		font-size: 14px;
+		line-height: 30px;
+	}
+	&__button {
+		padding: 25px 36px;
+	}
+}
+
+.materials__item.active {
+	color: $tertiaryTextColor;
+	text-decoration: none;
+}
+
+@media(max-width: $md1) {
+	.materials {
+		&__body {
+			justify-content: center;
+		}
+		&__content {
+			flex-basis: 100%;
+		}
+	}
+}
+
+@media(max-width: $md3) {
+	.materials {
+		&__header {
+			justify-content: center;
+		}
+		&__item {
+			flex-basis: 33.33333%;
+		}
+		&__item-text {
+			font-size: 16px;
+		}
+	}
+}
+
+@media(max-width: $md4) {
+	.materials {
+		&__item {
+			flex-basis: 50%;
+		}
+		&__wrapper {
+			max-width: 100%;
+		}
+		&__check {
+			font-size: 13px;
+			line-height: 24px;
+		}
+		&__checkbox {
+			margin-right: 15px;
+		}
+		&__content-footer {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			margin-top: 30px;
+		}
+		&__footer-description {
+			margin-bottom: 10px;
+		}
+		&__button {
+			padding: 20px 20px;
+		}
+		&__description-price {
+			margin-bottom: 10px;
+			font-size: 18px;
+			line-height: 24px;
+		}
+	}
+}
+
+@media(max-width: $minwidth) {
+	.materials {
+		&__item {
+			flex-basis: 100%;
+		}
+	}
+}
+
+
+
