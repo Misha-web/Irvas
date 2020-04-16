@@ -1,5 +1,8 @@
 .section {
 	padding: 80px 0px;
+	&-bg {
+		background-color: $secondaryBg;
+	}
 	&__item {
 		text-align: center;
 	}
@@ -12,5 +15,18 @@
 	&__item-img {
 		margin-top: 25px;
 		margin-bottom: 80px;
+	}
+}
+
+@media(max-width: $md3) {
+	.section {
+		padding: 60px 0px;
+		&__item-title {
+			font-size: 26px;
+		}
+		&__item-img {
+			margin-top: 20px;
+			margin-bottom: 60px;
+		}
 	}
 }
