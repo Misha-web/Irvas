@@ -1238,6 +1238,52 @@ template {
   }
 }
 
+.works__inner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 -15px -30px;
+}
+
+.works__item {
+  padding: 0px 15px 30px;
+  flex-basis: 25%;
+  position: relative;
+}
+
+.works__item-img {
+  display: block;
+  width: 100%;
+  max-width: 270px;
+  margin: 0 auto;
+}
+
+.works__item-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .works__item {
+    flex-basis: 33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .works__item {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .works__item {
+    flex-basis: 100%;
+  }
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
