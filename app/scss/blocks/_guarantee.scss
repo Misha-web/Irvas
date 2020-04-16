@@ -1,0 +1,51 @@
+.guarantee {
+	background-image: linear-gradient(to bottom, #1799d6 100%, #0281c1 100%);
+	background-color: #0281c1;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		text-align: center;
+		margin-bottom: -80px;
+	}
+	&__item {
+		padding-bottom: 80px;
+		flex-basis: 33.33333%;
+	}
+	&__item-img {
+		display: block;
+		max-width: 70px;
+		margin: 0 auto 30px;
+		width: 100%;	
+	}
+	&__item-text {
+		max-width: 170px;
+		margin: 0 auto;
+		color: #ffffff;
+		font-family: "Open Sans - Semibold";
+	}
+}
+
+@media(max-width: $md3) {
+	.guarantee {
+		&__inner {
+			justify-content: center;
+			margin-bottom: -60px;
+		}
+		&__item {
+			padding-bottom: 60px;
+			flex-basis: 50%;
+		}
+	}
+}
+
+@media(max-width: $md4) {
+	.guarantee {
+		&__item {
+			flex-basis: 100%;
+		}
+		&__item-text {
+			max-width: 100%;
+		}
+	}
+}

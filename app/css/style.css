@@ -840,6 +840,10 @@ template {
   text-transform: uppercase;
 }
 
+.section__item-title--white {
+  color: #fff;
+}
+
 .section__item-img {
   margin-top: 25px;
   margin-bottom: 80px;
@@ -1281,6 +1285,120 @@ template {
 @media (max-width: 480px) {
   .works__item {
     flex-basis: 100%;
+  }
+}
+
+.payment__title {
+  text-align: center;
+  color: #333;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.payment__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.payment__item {
+  flex-basis: 33.33333%;
+  margin-top: 90px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.payment__item-img {
+  display: block;
+  width: 100%;
+  max-width: 70px;
+}
+
+.payment__item-text {
+  display: block;
+  margin-left: 30px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+@media (max-width: 991px) {
+  .payment__inner {
+    justify-content: center;
+  }
+  .payment__item {
+    flex-basis: 50%;
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .payment__item {
+    margin-top: 50px;
+  }
+  .payment__item-text {
+    margin-left: 20px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment__item {
+    flex-basis: 100%;
+  }
+}
+
+.guarantee {
+  background-image: linear-gradient(to bottom, #1799d6 100%, #0281c1 100%);
+  background-color: #0281c1;
+}
+
+.guarantee__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: -80px;
+}
+
+.guarantee__item {
+  padding-bottom: 80px;
+  flex-basis: 33.33333%;
+}
+
+.guarantee__item-img {
+  display: block;
+  max-width: 70px;
+  margin: 0 auto 30px;
+  width: 100%;
+}
+
+.guarantee__item-text {
+  max-width: 170px;
+  margin: 0 auto;
+  color: #ffffff;
+  font-family: "Open Sans - Semibold";
+}
+
+@media (max-width: 768px) {
+  .guarantee__inner {
+    justify-content: center;
+    margin-bottom: -60px;
+  }
+  .guarantee__item {
+    padding-bottom: 60px;
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .guarantee__item {
+    flex-basis: 100%;
+  }
+  .guarantee__item-text {
+    max-width: 100%;
   }
 }
 

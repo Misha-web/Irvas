@@ -11,6 +11,9 @@
 		font-size: 30px;
 		font-weight: 700;
 		text-transform: uppercase;
+		&--white {
+			color: #fff;
+		}
 	}
 	&__item-img {
 		margin-top: 25px;
