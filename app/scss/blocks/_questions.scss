@@ -1,0 +1,37 @@
+.questions {
+	border: 1px solid $primaryLight;
+	background-color: #00a0eb;
+	&__item {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		text-align: center;
+		color: $primaryLight;
+		margin: 0 -15px;
+	}
+	&__item-text {
+		padding: 10px 15px;
+		font-size: 30px;
+		line-height: 26px;
+	}
+	&__item-link {
+		padding: 10px 15px;
+		color: $primaryLight;
+		font-family: "Open Sans - Semibold";
+		font-size: 30px;
+		font-weight: 400;
+		line-height: 26px;
+	}
+}
+
+@media(max-width: $md3) {
+	.questions {
+		&__item-text {
+			font-size: 26px;
+		}
+		&__item-link {
+			font-size: 26px;
+		}
+	}
+}
+
