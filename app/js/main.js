@@ -21,6 +21,34 @@ $(document).ready(function() {
 		content.addClass("active");
 	});
 
+	function timerLeft() {
+		setInterval(function() {
+			let daysLeft = document.getElementById('timer-v-days'),
+				daysText = document.getElementById('timer-v-days__text'),
+				hoursLeft = document.getElementById('timer-v-hours'),
+				hoursText = document.getElementById('timer-v-hours__text'),
+				minutesLeft = document.getElementById('timer-v-minutes'),
+				minutesText = document.getElementById('timer-v-minutes__text'),
+				secLeft = document.getElementById('timer-v-seconds'),
+				secText = document.getElementById('timer-v-seconds__text'),
+				dateNow = new Date().getTime(),
+				dateFinish = new Date(2020,4,19),
+				sec = Math.floor((dateFinish - dateNow) / 1000),
+				secToMinutes = sec % 3600,
+				daysNumber = Math.floor((dateFinish - dateNow) / (1000 * 60 * 60 *24)),
+				hoursNumber = Math.floor(sec / 3600),
+				minutesNumber = Math.floor(secToMinutes / 60),
+				secondsNumber = secToMinutes % 60;
+
+			daysLeft.innerHTML = daysNumber;
+			hoursLeft.innerHTML = hoursNumber;
+			minutesLeft.innerHTML = minutesNumber;
+			secLeft.innerHTML = secondsNumber;
+		}, 1000)
+	}
+
+	timerLeft();
+
 });
 
 
