@@ -21,6 +21,8 @@ body {
     font-weight: 400;
     color: $primaryDark;
     font-size: 18px;
+    min-width: 320px;
+    overflow-x: hidden;
 }
 
 *,
